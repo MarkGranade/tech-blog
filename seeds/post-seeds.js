@@ -19,6 +19,12 @@ const postData = [
 			"I have really loved learning about ORMs. Its really simplified the way i create queries in SQL!",
 		user_id: 3,
 	},
+	{
+		title: "Aliens are invading!!",
+		post_text:
+			"Aliens have been spotted landing near San Fransico! Contact has not been possible with the aliens so far. Stay tuned for updates!",
+		user_id: 2,
+	},
 ];
 
 const seedPosts = () => Post.bulkCreate(postData);

@@ -2,12 +2,13 @@
 	"name": "tech-blog",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start-server": "node ./server.js",
-		"start": "nodemon ./server.js localhost 3001",
-		"seed": "node seeds/index.js"
+		"start": "npm run seed && npm run start-server",
+		"seed": "node seeds/index.js",
+		"nodemon": "nodemon ./server.js localhost 3001"
 	},
 	"repository": {
 		"type": "git",

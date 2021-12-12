@@ -1,13 +1,22 @@
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+const { Post, User, Comment } = require("../../models");
 
 // GET /api/posts
 router.get("/", (req, res) => {
 	console.log("======================");
 	Post.findAll({
-		attributes: ["id", "title", "post_text", "created_at"],
 		order: [["created_at", "DESC"]],
+		attributes: ["id", "title", "post_text", "created_at"],
 		include: [
+			{
+				// includes comment data in this /api/post GET request. Will need all this data for front end
+				model: Comment,
+				attributes: ["id", "comment_text", "post_id", "created_at"],
+				include: {
+					model: User,
+					attributes: ["username"],
+				},
+			},
 			{
 				model: User,
 				attributes: ["username"],
@@ -29,6 +38,14 @@ router.get("/:id", (req, res) => {
 		},
 		attributes: ["id", "title", "post_text", "created_at"],
 		include: [
+			{
+				model: Comment,
+				attributes: ["id", "comment_text", "post_id", "created_at"],
+				include: {
+					model: User,
+					attributes: ["username"],
+				},
+			},
 			{
 				model: User,
 				attributes: ["username"],

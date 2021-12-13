@@ -1,0 +1,20 @@
+<ol>
+	{{#each posts}}
+		<li>
+			<article>
+				<div>
+					<h3>{{title}}</h3>
+					<span>({{post_text}})</span>
+				</div>
+				<div>
+					by
+					{{user.username}}
+					on
+					{{created_at}}
+					|
+					<a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+				</div>
+			</article>
+		</li>
+	{{/each}}
+</ol>>

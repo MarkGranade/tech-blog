@@ -16,6 +16,11 @@ const userData = [
 		email: "alpal@gmail.com",
 		password: "alpal!27",
 	},
+	{
+		username: "Paladin_Danse",
+		email: "BoS4Lyfe@gmail.com",
+		password: "brotherhood",
+	},
 ];
 
 const seedUsers = () => User.bulkCreate(userData, { individualHooks: true });

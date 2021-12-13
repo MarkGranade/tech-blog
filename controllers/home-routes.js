@@ -35,6 +35,7 @@ router.get("/", (req, res) => {
 		});
 });
 
+// login page route
 router.get("/login", (req, res) => {
 	res.render("login");
 });

@@ -5,15 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tech Blog</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
 	</head>
 
 	<body>
 		<div>
 			<nav>
-				<a href="/">Home</a>
+				<a href="/" class="border border-primary">Home</a>
 				{{! <a href='/dashboard'>Dashboard</a> }}
-				<button id="logout" class="btn-no-style">Logout</button>
-				<a href="/login">login</a>
+				<button
+					id="logout"
+					class="btn-no-style border border-success"
+				>Logout</button>
+				<a href="/login" class="border border-warning">login</a>
 			</nav>
 			<header>
 				<h1>

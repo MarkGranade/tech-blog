@@ -17,9 +17,12 @@
 				<a href="/" class="border border-primary">Home</a>
 				{{! <a href='/dashboard'>Dashboard</a> }}
 				{{#if loggedIn}}
-				<button id="logout" class="btn-no-style border border-success">Logout</button>
+					<button
+						id="logout"
+						class="btn-no-style border border-success"
+					>Logout</button>
 				{{else}}
-				<a href="/login" class="border border-warning">login</a>
+					<a href="/login" class="border border-warning">Login</a>
 				{{/if}}
 			</nav>
 			<header>
@@ -36,7 +39,7 @@
 			</footer>
 		</div>
 		{{#if loggedIn}}
-		<script src="/javascript/logout.js"></script>
+			<script src="/javascript/logout.js"></script>
 		{{/if}}
 	</body>
 

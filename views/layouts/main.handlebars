@@ -20,8 +20,14 @@
 					</h1>
 					<a href="/" class="col-1 text-center fw-bold text-dark">Home</a>
 					{{#if loggedIn}}
-						<a href="/dashboard" class="col-1 text-center text-dark">Dashboard</a>
-						<button id="logout" class="col-1 text-center btn btn-outline-none text-dark">Logout</button>
+						<a
+							href="/dashboard"
+							class="col-1 text-center text-dark"
+						>Dashboard</a>
+						<button
+							id="logout"
+							class="col-1 text-center btn btn-outline-none text-dark"
+						>Logout</button>
 					{{else}}
 						<a href="/login" class="col-1 text-dark">Login</a>
 					{{/if}}
